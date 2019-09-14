@@ -21,11 +21,15 @@
   <!-- 推荐视频 -->
   <view class="other-list">
     <navigator wx:for="{{othersList}}" wx:key="{{index}}" class="other-item">
+      <!-- 左边 -->
       <view class="other-img-warp">
         <image mode="widthFix" src="{{item.imgSrc}}"></image>
       </view>
+      <!-- 右边 -->
       <view class="other-info">
+        <!-- 标题 -->
         <view class="other-title">{{item.title}}</view>
+        <!-- 播放弹幕信息 -->
         <view class="other-detail">
           <text class="play-count">{{item.playMsg}}次播放</text>
           <text class="comment-count">{{item.commentCount}}弹幕</text>
@@ -50,6 +54,7 @@
         </view>
         <!-- 右侧 -->
         <view class="comment-info">
+          
           <view class="comment-detail">
             <text class="author">{{item.username}}</text>
             <text class="date">{{item.commentDate}}</text>

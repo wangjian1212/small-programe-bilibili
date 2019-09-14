@@ -13,8 +13,6 @@ Page({
     commentData: [],
   },
 
- 
-
   /* 根据ID获取视频详情 */
   getVideoCurrent(videoId) {
     let that = this;
