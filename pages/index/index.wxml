@@ -22,7 +22,7 @@
           <image mode="widthFix" src="{{item.imgSrc}}"></image>
         </navigator>
       </swiper-item>
-  </swiper>
+    </swiper>
   </view>
   <!-- 视频列表 -->
   <view class="video-warp">
