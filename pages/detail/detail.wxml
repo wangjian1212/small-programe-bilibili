@@ -1,0 +1,64 @@
+<view class="main">
+  <!-- 公共头部 -->
+  <MyTitle></MyTitle>
+  <!-- 视频详情 -->
+  <view class="video-info">
+    <!-- 视频标签 -->
+    <video src="{{videoInfo.videoSrc}}" controls></video>
+    <!-- 视频标题 -->
+    <view class="video-title">
+      <text>{{videoInfo.videoTitle}}</text>
+      <text class="fa fa-angle-down"></text>
+    </view>
+    <!-- 视频作者。。。 -->
+    <view class="video-detail">
+      <text class="author">{{videoInfo.author}}</text>
+      <text class="play-count">{{videoInfo.playCount}}</text>
+      <text class="comment-count">{{videoInfo.commentCount}}弹幕</text>
+      <text class="date">{{videoInfo.date}}</text>
+    </view>
+  </view>
+  <!-- 推荐视频 -->
+  <view class="other-list">
+    <navigator wx:for="{{othersList}}" wx:key="{{index}}" class="other-item">
+      <view class="other-img-warp">
+        <image mode="widthFix" src="{{item.imgSrc}}"></image>
+      </view>
+      <view class="other-info">
+        <view class="other-title">{{item.title}}</view>
+        <view class="other-detail">
+          <text class="play-count">{{item.playMsg}}次播放</text>
+          <text class="comment-count">{{item.commentCount}}弹幕</text>
+        </view>
+      </view>
+    </navigator>
+  
+  </view>
+  <!-- 评论区 -->
+  <view class="comment-warp">
+    <!-- 评论头部 -->
+    <view class="comment-title">
+      评论 （{{commentData.commentTotalCount}}）
+    </view>
+    <!-- 评论列表 -->
+    <view class="comment-list">
+     <!-- 评论 -->
+      <view class="comment-item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+        <!-- 左侧 -->
+        <view class="comment-user">
+          <image mode="widthFix" src="{{item.userIconSrc}}"></image>
+        </view>
+        <!-- 右侧 -->
+        <view class="comment-info">
+          <view class="comment-detail">
+            <text class="author">{{item.username}}</text>
+            <text class="date">{{item.commentDate}}</text>
+          </view>
+          <view class="comment-content">
+            {{item.commentInfo}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

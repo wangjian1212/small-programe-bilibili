@@ -1,0 +1,72 @@
+page{
+  padding: 5rpx;
+  color: #666;
+}
+
+/* 首页导航 */
+.nav-warp{}
+.nav{
+  white-space: nowrap;
+  padding: 5rpx 0;
+}
+.nav-item{
+  padding: 20rpx 45rpx;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.nav-item.active{
+  border-bottom: 5rpx solid #FB7299;
+}
+/* 轮播图 */
+.slides{
+  margin-top: 10rpx;
+}
+.slides swiper{
+  height: 220rpx;
+}
+.slides navigator{
+  height: 100%;
+  width: 100%;
+}
+.slides image{
+  height: 100%;
+  width: 100%;
+}
+/* 视频列表 */
+.video-warp{
+  padding: 5rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video-warp .video-item{
+  width: 48%;
+  margin-bottom: 20rpx;
+}
+.video-img{
+  position: relative;
+}
+.video-img image{
+  width: 100%;
+  border-radius: 15rpx;
+}
+.video-img .video-info{
+  position:absolute;
+  bottom: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  color: #fff;
+  font-size: 30rpx;
+}
+.play-count-wrap{
+  
+}
+.video-title{
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+}

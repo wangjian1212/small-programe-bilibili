@@ -1,0 +1,59 @@
+<view class="main">
+  <!-- 公共头部 -->
+  <MyTitle></MyTitle>
+  <!-- 首页导航 -->
+  <view class="nav-warp">
+    <!-- 自己的滚动区域组件 -->
+    <scroll-view class="nav" scroll-x>
+      <view bindtap="tapNav" 
+        data-index="{{index}}" 
+        class="nav-item {{index === currentNav ? 'active' :''}}" 
+        wx:for="{{navList}}" 
+        wx:key="{{index}}">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 轮播图 -->
+  <view class="slides">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+        <navigator>
+          <image mode="widthFix" src="{{item.imgSrc}}"></image>
+        </navigator>
+      </swiper-item>
+  </swiper>
+  </view>
+  <!-- 视频列表 -->
+  <view class="video-warp">
+    <!-- 图片容器 -->
+    <navigator url="../detail/detail?id={{item.id}}" class="video-item" wx:for="{{videoList}}" wx:key="{{index}}">
+      <view class="video-img">
+        <!-- 图片 -->
+        <image mode="widthFix" src="{{item.imgSrc}}"></image>
+        <!-- 播放量 评论 -->
+        <view class="video-info">
+          <!-- 播放量 -->
+          <view class="play-count-wrap">
+            <text class="fa fa-play-circle-o"></text>
+            <text class="play-count">{{item.playCount}}</text>
+          </view>
+          <!-- 评论 -->
+          <view class="comment-count-row">
+            <text class="fa fa-commenting-o"></text>
+            <text class="comment-count">{{item.commentCount}}</text>
+        </view>
+      </view>
+      </view>
+      
+      <!-- 图片标题 -->
+      <view class="video-title">
+        <text>{{item.desc}}</text>
+      </view>
+
+    </navigator>
+    
+  </view>
+  
+
+</view>
