@@ -48,13 +48,12 @@
     <view class="comment-list">
      <!-- 评论 -->
       <view class="comment-item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
-        <!-- 左侧 -->
+        <!-- 左侧 wj-branch-->
         <view class="comment-user">
           <image mode="widthFix" src="{{item.userIconSrc}}"></image>
         </view>
-        <!-- 右侧 -->
+        <!-- 右侧 wj-barnch-->
         <view class="comment-info">
-          
           <view class="comment-detail">
             <text class="author">{{item.username}}</text>
             <text class="date">{{item.commentDate}}</text>
